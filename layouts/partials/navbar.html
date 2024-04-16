@@ -1,0 +1,36 @@
+{{ $homeLink := .Site.Params.Homepage }}
+<!-- {{ if .IsHome }}
+    {{ $homeLink = "/" }}
+{{ end }} -->
+<div class="navbar-header">
+    <!-- <label id="navbar-toggle-label" for="navbar-toggle">☰</label>
+    <input type="checkbox" id="navbar-toggle"> -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        {{ if and .Site.Menus .Site.Menus.main }}
+            <div class="menu">
+                {{ $lastIndex := sub (len .Site.Menus.main) 1 }}
+                {{ $currentPage := .RelPermalink }}
+                {{ range $i, $el := .Site.Menus.main }}
+                    {{ $active := "" }}
+                    {{ if eq $el.URL $currentPage }}
+                        {{ $active = "active" }}
+                    {{ end }}
+                    <a class="{{ $active }}" href="{{ $el.URL }}">{{ $el.Name }}</a>
+                    {{ if ne $i $lastIndex }} / {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
+        <div class="navbar-end">
+            <div class="socials">
+                {{ $socials := .Site.Params.socials }}
+                {{ range $el := $socials }}
+                    <div class="social">
+                        <a href="{{ $el.url }}" {{ if $el.rel_me }} rel="me" {{ end }} target="_blank">
+                            <i class="{{ $el.icon }}"></i>
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </nav>    
+</div>

@@ -1,0 +1,53 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<section class="section" id="food-section">
+    <div class="section-header">
+        <h1>Restaurants</h1>
+    </div>
+    <div class="food-list">
+        {{ range .Pages }}
+        <div class="card">
+            <a href="{{ .RelPermalink }}">
+                {{ with .Resources.GetMatch (printf "images/%s*" .Params.cover) }}
+                    {{ $resizer := "1400x r0" }}
+                    {{ with .Exif }}
+                        {{ if eq .Tags.Orientation 6 }}
+                            {{ $resizer = "1400x r270" }}
+                        {{ end }}
+                        {{ if eq .Tags.Orientation 3 }}
+                            {{ $resizer = "1400x r180" }}
+                        {{ end }}
+                        {{ if eq .Tags.Orientation 8 }}
+                            {{ $resizer = "1400x r90" }}
+                        {{ end }}
+                    {{ end }}
+                    {{ $img := .Resize $resizer }}
+                    <img class="cover" src="{{ $img.RelPermalink }}">
+                {{ end }}
+            </a>
+            <div class="card-info">
+                <div class="card-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </div>
+                <div class="card-rating">
+                    <span class="filled-rating">
+                        {{ range $i := seq (index .Params.ratings 0)}}
+                        ★
+                        {{ end }}
+                    </span>
+                        {{ $nbEmptyStars := math.Sub 5 (index .Params.ratings 0)}}
+                    <span class="empty-rating">
+                        {{ range $i := seq $nbEmptyStars}}
+                        ☆
+                        {{ end }}
+                    </span>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

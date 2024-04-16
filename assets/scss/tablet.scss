@@ -1,0 +1,87 @@
+@media (max-width: 1024px) {
+    nav.navbar {
+        margin-left: unset;
+        margin-right: unset;
+        display: grid;
+        justify-content: center;
+        height: 15rem;
+        padding: 10px;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .food-list {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 30vw);
+        gap: 1rem;
+    }
+
+   /* single page */
+
+   .food-single {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+
+        .row {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+    .food-header-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.5em;
+    }
+
+    #food-title-rating {
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+
+    .food-title h1 {
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 3rem;
+        margin: 0.5rem 0 0 0.5rem;
+    }
+
+    .food-address {
+        margin-bottom: 0.5em;
+    }
+    
+    .food-photos {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+
+        img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            transition: transform 1000ms;
+            border-radius: 5px;
+        };
+
+        .photos-radio-btns {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            // justify-content: space-between;
+            gap: 0.5rem;
+            grid-template-columns: repeat(2, 40vw) !important;
+            max-width: 100%;
+        };
+    }
+
+}

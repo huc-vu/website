@@ -1,0 +1,39 @@
+baseURL: / # todo: change site url.
+title: huc.vu # todo: change site name.
+defaultContentLanguage: 'fr'
+timeout: 60
+
+params:
+  image: /images/banner.png
+  logo: logo.png # todo: add your custom logo to static/
+  copyright: Tous droits réservés. # todo: set your copyright type.
+  author: Huc VU
+  socials:
+    - icon: 'fab fa-github fa-lg'
+      url: 'https://github.com/huc-vu'
+    - icon: 'fab fa-linkedin-in fa-lg'
+      url: ''
+  dontShowLogo: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+  rating: ratings
+
+permalinks:
+  home: ":filename/"
+
+languages:
+  fr:
+    languageName: FR
+    weight: 1
+    copyright: 
+  en:
+    languageName: EN
+    weight: 2
+    copyright: All rights reserved.

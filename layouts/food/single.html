@@ -1,0 +1,100 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<div class="food-single">
+    <div class="food-header-row" id="food-title-rating">
+            <div class="food-title">
+                <h1>{{ .Title }}</h1>
+            </div>
+            <div class="food-rating">
+                <span class="filled-rating">
+                    {{ range $i := seq (index .Params.ratings 0)}}
+                    ★
+                    {{ end }}
+                </span>
+                    {{ $nbEmptyStars := math.Sub 5 (index .Params.ratings 0)}}
+                <span class="empty-rating">
+                    {{ range $i := seq $nbEmptyStars}}
+                    ☆
+                    {{ end }}
+                </span>
+            </div>
+    </div>
+    <div class="food-header-row">
+        <div class="food-address">
+            <h3>{{ .Params.Address }}</h3>
+        </div>
+        <div class="food-tags">
+            {{ range .Params.Tags }}
+            <div class="badge"> {{ . }} </div>
+            {{ end }}
+        </div>
+    </div> 
+    
+    <div class="row">
+        <div class="food-photos">
+            {{ $resources := .Resources.Match "images/*" }}
+            {{ $nbPhotos := len $resources }}
+            {{ $gridStyle := "4, 15vw"}}
+            {{ if eq $nbPhotos 1 }}
+                {{ $gridStyle = "1, 40vw" }}
+            {{ else if eq $nbPhotos 2 }}
+                {{ $gridStyle = "2, 32vw" }}
+            {{ else if eq $nbPhotos 3 }}
+                {{ $gridStyle = "3, 26vw" }}
+            {{ else if eq $nbPhotos 4 }}
+                {{ $gridStyle = "2, 22vw"}}
+            {{ else if eq $nbPhotos 5 6 }}
+                {{ $gridStyle = "3, 20vw"}}
+            {{ end }}
+            <div class="photos-radio-btns" style="grid-template-columns: repeat({{ $gridStyle }});">
+                {{ range $index, $resource := $resources}}
+                {{ $resizer := "1400x r0" }}
+                {{ with $resource.Exif }}
+                    {{ if eq .Tags.Orientation 6 }}
+                        {{ $resizer = "1400x r270" }}
+                    {{ end }}
+                    {{ if eq .Tags.Orientation 3 }}
+                        {{ $resizer = "1400x r180" }}
+                    {{ end }}
+                    {{ if eq .Tags.Orientation 8 }}
+                        {{ $resizer = "1400x r90" }}
+                    {{ end }}
+                {{ end }}
+                {{ $img := $resource.Resize $resizer }}
+                <div class="photos-radio-btns__btn" role="radio" aria-checked="false" tabindex="-1">
+                    <a href="{{ .RelPermalink }}" class="glightbox">
+                        <img src="{{ $img.RelPermalink }}">
+                    </a>
+                </div>
+                {{ end }} 
+            </div>
+        </div>
+        {{ if or (eq $nbPhotos 1 4 5 6) (gt $nbPhotos 6)}}
+        <div class="food-content">
+            {{ .Content }}
+        </div>
+        {{ end }}
+    </div>
+    {{ if eq $nbPhotos 2 3 }}
+    <div class="food-content">
+        {{ .Content }}
+    </div>
+    {{ end }}
+
+
+</div>
+
+<script type="text/javascript">
+    const lightbox = GLightbox({
+        selector: ".glightbox",
+        touchNavigation: true,
+        loop: false,
+        dragToleranceX: 100,
+        dragToleranceY: 150,
+        zoomable: false,
+        preload: false
+     });
+    lightbox.init();
+</script>

@@ -1,0 +1,12 @@
+<div class="content has-text-centered">
+    <p>
+        {{ with .Site.Params.Copyright }}
+            {{ . }}
+        Icône fournie par <a target="_blank" class="source-love" href="https://openmoji.org/">OpenMoji</a>.
+        <br>
+        {{ end }}
+        {{ with .Site.Params.Author }}
+            © {{ dateFormat "2006" now }}, {{ . }}.
+        {{ end }}
+    </p>
+</div>

@@ -1,0 +1,13 @@
+:root {
+    --main: #1d4f99;
+    --text-main: #102C57;
+    --text-main-lighter: #184485;
+    --background: #ffffff;
+}
+
+[data-theme="dark"] {
+    --main: #DAC0A3;
+    --text-main: #ffffff;
+    --text-main-lighter: #ffffff;
+    --background: #111111;
+}

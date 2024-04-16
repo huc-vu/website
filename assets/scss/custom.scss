@@ -1,0 +1,109 @@
+/* Custom CSS styles */
+
+.lang-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    margin-left: 10px;
+}
+
+.lang-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-center {
+    width: 60%;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 60%;
+    position: relative;
+    height: 0;
+    margin: 20px;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .single-center {
+        width: 90%;
+    }
+    
+    .map-responsive {
+        overflow: hidden;
+        padding-bottom: 100%;
+        position: relative;
+        height: 0;
+        margin: 0.5rem;
+    }
+    
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+
+.image-box {
+    position: relative;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px;
+}
+
+.image-box-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-box:hover .image-box-overlay {
+    height: 4em;
+    cursor: pointer;
+}
+
+.image-box-text {
+    white-space: nowrap; 
+    color: rgb(32, 32, 32);
+    font-size: 1.2rem;
+    /* position: absolute; */
+    /* overflow: hidden; */
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* -ms-transform: translate(-50%, -50%); */
+}
+
+.image-box-rating {
+    font-size: small;
+}
+
+.fa-star {
+    color: rgb(255, 208, 0);
+}

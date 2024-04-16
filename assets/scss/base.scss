@@ -1,0 +1,37 @@
+html {
+    height: 100%;
+    background-color: var(--background);
+}
+
+body {
+    // min-height: 100%;
+    font-size: large;
+    color: var(--text-main);
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main) #f0f0f0;
+}
+
+.footer {
+    font-size: small;
+    padding: 3rem 1.5rem 2rem;
+}
+
+header {
+    height: 128px;
+    margin-bottom: 30px;
+}
+
+a {
+    margin-bottom: 2px;
+    color: var(--text-main);
+    text-decoration: none;
+    word-break: break-word;
+}

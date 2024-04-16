@@ -1,0 +1,359 @@
+.title {
+    color: var(--text-main);
+    font-size: xx-large;
+}
+
+nav.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background);
+    justify-content: space-between;
+    align-items: center;
+    height: unset !important;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#navbar-toggle, #navbar-toggle-label {
+    display: none;
+}
+
+.navbar-end {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.socials {
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social {
+    margin-right: 20px;
+}
+
+
+
+.navbar-burger {
+    color: #ffffff;
+    height: 6rem;
+}
+
+.menu {
+    max-width: 600px;
+    color: var(--background);
+}
+
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
+
+a img {
+    border: none;
+}
+
+.markdown p {
+    margin-bottom: 20px;
+}
+
+/* 404 page */
+
+.image-404 {
+    box-shadow: 2px 2px 2px 2px var(--main);
+}
+
+.title-404 {
+    font-size: 6em;
+}
+
+.subtitle-404 {
+    font-size: 1.7em;
+}
+
+.header-404 {
+    justify-content: center;
+    display: grid;
+}
+
+.body-404 {
+    margin-top: 20vh;
+}
+
+.noscroll {
+    position: fixed;
+    overflow: hidden;
+}
+
+.fullheight {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exif {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: small;
+    color: var(--text-main);
+}
+
+.footer {
+    background-color: var(--background);
+    color: var(--text-main);
+}
+
+#mobile {
+    display: none;
+}
+
+
+
+#food-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.food-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 15vw);
+    gap: 2rem;
+}
+
+.card {
+    // border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+    img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+.cover {
+    width: 100%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.2em 0 0.5em 0em;
+    margin: 0.2rem 0rem 0 0;
+
+    .filled-rating {
+        color: #e97c00;
+    }
+    
+    .empty-rating {
+        color: #d8d8d8;
+        margin-left: 3px;
+    }
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.card-rating {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+
+/* single page */
+
+.food-single {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 2em;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        margin: 2rem 0 2rem 0;
+    };
+}
+
+.food-header-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#food-title-rating {
+    align-items: baseline;
+}
+
+.food-title h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin: 1rem 1rem 0.5rem 0;
+}
+
+.food-address {
+    margin-right: 0.7em;
+}
+.food-address h3 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.food-rating {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+
+    .filled-rating {
+        color: #e97c00;
+    }
+    
+    .empty-rating {
+        color: #d8d8d8;
+        margin-left: 3px;
+    }
+}
+
+.food-rating-icon {
+    width: 30px;
+}
+
+.food-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: left;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+    font-size: 75%;
+    font-weight: 700;
+    // line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: var(--text-main);
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.food-photos {
+    margin-right: 2em;
+    // width: 100%;
+
+    img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        transition: transform 1000ms;
+        border-radius: 5px;
+    };
+
+    .photos-radio-btns {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        // justify-content: space-between;
+        gap: 0.5rem;
+        // grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        // grid-template-columns: repeat(3, 20vw);
+        // grid-template-rows: repeat(2, 40%);
+        max-width: 100%;
+        // width: 100%;
+        // max-height: 100%;
+        // height: 70vh;
+    };
+    
+}
+
+/*    -------------------------------- 
+
+💡 Styling siblings on hover
+🔗 https://codyhouse.co/nuggets/styling-siblings-on-hover
+
+-------------------------------- */
+
+.photos-radio-btns:hover .photos-radio-btns__btn:not(:hover) {
+    filter: grayscale(60%);
+    opacity: 0.75;
+}
+
+.photos-radio-btns:hover .photos-radio-btns__btn:not(:hover)::after {
+    background-color: rgba(#000, 0.5);
+}
+
+.photos-radio-btns__btn {
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.photos-radio-btns__btn::after {
+    content: '';
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0);
+    transition: .3s;
+}
+
+.food-content {
+    h2, h3, h4 {
+        margin-top: 0;
+    }
+}
