@@ -50,22 +50,30 @@
             {{ end }}
             <div class="photos-radio-btns" style="grid-template-columns: repeat({{ $gridStyle }});">
                 {{ range $index, $resource := $resources}}
-                {{ $resizer := "1400x r0" }}
+                {{ $factorFull := "2500x"}}
+                {{ $factorThumbnail :=  "1200x"}}
+                {{ $resizerFull := (printf "%s r0" $factorFull) }}
+                {{ $resizerThumbnail := (printf "%s r0" $factorThumbnail) }}
+                
                 {{ with $resource.Exif }}
-                    {{ if eq .Tags.Orientation 6 }}
-                        {{ $resizer = "1400x r270" }}
-                    {{ end }}
-                    {{ if eq .Tags.Orientation 3 }}
-                        {{ $resizer = "1400x r180" }}
-                    {{ end }}
-                    {{ if eq .Tags.Orientation 8 }}
-                        {{ $resizer = "1400x r90" }}
-                    {{ end }}
+                {{ if eq .Tags.Orientation 6 }}
+                    {{ $resizerFull = (printf "%s r270" $factorFull) }}
+                    {{ $resizerThumbnail = (printf "%s r270" $factorThumbnail) }}
                 {{ end }}
-                {{ $img := $resource.Resize $resizer }}
+                {{ if eq .Tags.Orientation 3 }}
+                    {{ $resizerFull = (printf "%s r180" $factorFull) }}
+                    {{ $resizerThumbnail = (printf "%s r180" $factorThumbnail) }}
+                {{ end }}
+                {{ if eq .Tags.Orientation 8 }}
+                    {{ $resizerFull = (printf "%s r90" $factorFull) }}
+                    {{ $resizerThumbnail = (printf "%s r90" $factorThumbnail) }}
+                {{ end }}
+                {{ end }}
+                {{ $imgFull := $resource.Resize $resizerFull }}
+                {{ $imgThumbnail := $resource.Resize $resizerThumbnail }}
                 <div class="photos-radio-btns__btn" role="radio" aria-checked="false" tabindex="-1">
-                    <a href="{{ .RelPermalink }}" class="glightbox">
-                        <img src="{{ $img.RelPermalink }}">
+                    <a href="{{ $imgFull.RelPermalink }}" class="glightbox">
+                        <img src="{{ $imgThumbnail.RelPermalink }}">
                     </a>
                 </div>
                 {{ end }} 
