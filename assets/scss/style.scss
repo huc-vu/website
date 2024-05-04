@@ -100,7 +100,9 @@ a img {
 
 .section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -356,4 +358,42 @@ a img {
     h2, h3, h4 {
         margin-top: 0;
     }
+}
+
+/* Photo gallery */
+
+.galleries {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    align-items: center;
+    padding-left: 10em;
+    padding-right: 10em;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em 0em 1em;
+
+    }
+
+    .card img {
+        width: 100%;
+        aspect-ratio: 3/2;
+    }
+
+}
+
+.gallery-section {
+    padding-top: 1rem;
+    padding-left: 10em;
+    padding-right: 10em;
 }

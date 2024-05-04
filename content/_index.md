@@ -3,3 +3,4 @@
 ---
 
 #### 🍴 [Restaurants](/food)
+#### 📷 [Photos](/gallery)

@@ -8,15 +8,6 @@ main:
   - name: map
     url: /foodmap/
     weight: 3
-  - name: travel
-    url: /travel/
-    weight: 4
-  - name: misc
-    url: /misc/
-    weight: 5
-  - name: gallery
-    url: /tags/all/
-    weight: 6
   - name: about
     url: /about/
     weight: 7

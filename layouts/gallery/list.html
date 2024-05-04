@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<section class="section">
+    <div class="section-header">
+        <h1>Photos</h1>
+    </div>
+    <div class="galleries">
+        {{ range .Pages }}
+        {{ $gallery := partial "helpers/get-gallery.html" . }}
+            <a class="card" href="{{ .RelPermalink }}" title="{{ .Title }}">
+                <img src="{{ $gallery.thumbnail.RelPermalink }}">
+                <div class="gallery-info">
+                    <h3>{{ .Title }}</h2>
+                    <p>{{ $gallery.imageCount }} photos</p>
+                </div>
+            </a>
+        {{ end }}
+    </div>  
+</section>
+
+{{ partial "footer.html" . }}

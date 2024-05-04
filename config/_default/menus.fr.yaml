@@ -8,6 +8,9 @@ main:
   - name: carte
     url: /foodmap/
     weight: 3
+  - name: photos
+    url: /gallery/
+    weight: 4
   - name: à propos
     url: /about/
     weight: 7

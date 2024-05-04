@@ -1,0 +1,54 @@
+<!-- Source: https://github.com/nicokaiser/hugo-theme-gallery/blob/main/layouts/partials/gallery.html -->
+
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+{{ $gallery := partial "helpers/get-gallery.html" . }}
+
+<!-- {{ $columnsCount := 4 }}
+{{ if lt $gallery.imageCount $columnsCount}}
+	{{ $columnsCount = $gallery.imageCount }}
+{{ end }}
+
+{{ $columns := newScratch }}
+{{ range $index, $num := (seq 0 (sub $columnsCount 1)) }}
+    {{ $columns.Set (printf "%d" $num) slice }}
+{{ end }}
+
+
+{{ range $index, $img := $gallery.images }}
+    {{ $colNumber := mod $index $columnsCount}}
+    {{ $columns.Add (printf "%d" $colNumber) $img }}
+{{ end }} -->
+
+<section class="gallery-section">
+    <div class="section-header">
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div id="gallery">
+        {{ range $gallery.images }}
+            {{ $image := . }}
+            {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 1000x1000")) }}
+            {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 2000x2000")) }}
+            <a class="gallery-item glightbox" href="{{ $full.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
+                <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}"  />
+              </a>
+        {{ end }}
+    </div>
+</section>
+
+<script type="text/javascript">
+    const lightbox = GLightbox({
+        selector: ".glightbox",
+        touchNavigation: true,
+        loop: false,
+        dragToleranceX: 100,
+        dragToleranceY: 150,
+        zoomable: false,
+        preload: false
+     });
+    lightbox.init();
+</script>
+
+{{ partial "footer.html" . }}
