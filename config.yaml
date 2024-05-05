@@ -13,7 +13,6 @@ params:
       url: 'https://github.com/huc-vu'
     - icon: 'fab fa-linkedin-in fa-lg'
       url: ''
-  dontShowLogo: false
 
 markup:
   defaultMarkdownHandler: goldmark

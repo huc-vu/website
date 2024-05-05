@@ -3,11 +3,14 @@ main:
     url: /en
     weight: 1
   - name: food
-    url: /food/
+    url: /en/food/
     weight: 2
   - name: map
-    url: /foodmap/
+    url: /en/foodmap/
     weight: 3
+  - name: gallery
+    url: /en/gallery/
+    weight: 4
   - name: about
-    url: /about/
+    url: /en/about/
     weight: 7

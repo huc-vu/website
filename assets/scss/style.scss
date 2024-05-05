@@ -12,10 +12,17 @@ nav.navbar {
     height: unset !important;
     margin-left: 2em;
     margin-right: 2em;
+    margin-top: 0.5em;
 }
 
-#navbar-toggle, #navbar-toggle-label {
+#menuToggle input {
     display: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
 }
 
 .navbar-end {
@@ -41,7 +48,9 @@ nav.navbar {
     margin-right: 20px;
 }
 
-
+.has-text-centered {
+    text-align: center;
+}
 
 .navbar-burger {
     color: #ffffff;
