@@ -3,7 +3,7 @@
 {{ $gallery := "" }}
 {{ $images := .Resources.ByType "image" }}
 {{ if gt (len $images) 0 }}
-  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images 0) }}
+  {{ $featured := ($images.GetMatch (printf "%s*" .Params.featured_image)) | default (index $images 0) }}
   {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 1000x1000")) }}
   {{ $imageCount := 0 }}
   {{ $albumCount := 0 }}

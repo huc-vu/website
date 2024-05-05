@@ -29,8 +29,8 @@
     <div id="gallery">
         {{ range $gallery.images }}
             {{ $image := . }}
-            {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 1000x1000")) }}
-            {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 2000x2000")) }}
+            {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")) }}
+            {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 2500x2500")) }}
             <a class="gallery-item glightbox" href="{{ $full.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
                 <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}"  />
               </a>
