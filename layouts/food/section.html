@@ -31,6 +31,11 @@
                 <div class="card-title">
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </div>
+                <div class="card-tags">
+                    {{ range .Params.Tags }}
+                        <div class="badge"> {{ . }} </div>
+                    {{ end }}
+                </div>
                 <div class="card-rating">
                     <span class="filled-rating">
                         {{ range $i := seq (index .Params.ratings 0)}}

@@ -112,7 +112,7 @@ a img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    // padding: 1rem;
 }
 
 .text-center {
@@ -151,7 +151,7 @@ a img {
 .section-header {
     display: flex;
     justify-content: center;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
 }
 
 .food-list {
@@ -194,6 +194,18 @@ a img {
     .empty-rating {
         color: #d8d8d8;
         margin-left: 3px;
+    }
+}
+
+.card-tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    .badge {
+        background-color: #3d77c2;
     }
 }
 
