@@ -6,7 +6,7 @@ ratings:
 - 5
 tags:
 - japonais
-cover: P1004225_export
+cover: P1005451
 ---
 
 #### Assortiment de Nigiri 12 pièces
