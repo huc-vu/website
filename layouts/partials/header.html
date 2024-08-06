@@ -1,40 +1,27 @@
-<!DOCTYPE html>
-<html>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href={{ "favicon.ico" | relURL }} />
+{{ $styleSass := resources.Get "scss/main.scss"}}
+{{ $styleCSS := $styleSass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $styleCSS.RelPermalink }}">
+<link rel="stylesheet" href={{ "css/glightbox.css" | relURL }}>
 
-	{{ if and .Title (not .IsHome) }}
-		<title>{{ .Title }} {{ if .Params.Subtitle }}- {{ .Params.Subtitle }}{{else}}- {{ .Site.Title }}{{ end }}</title>
-	{{ else }}
-		<title>{{ .Site.Title }}</title>
-	{{ end }}
-	{{ partial "meta" . }}
-	<link rel="icon" type="image/png" href={{ "favicon.ico" | relURL }} />
-    {{ $styleSass := resources.Get "scss/main.scss"}}
-    {{ $styleCSS := $styleSass | resources.ToCSS }}
-    <link rel="stylesheet" href="{{ $styleCSS.RelPermalink }}">
-    <link rel="stylesheet" href={{ "css/glightbox.css" | relURL }}>
+{{ $params := dict
+"closeTitle" (i18n "closeTitle")
+"zoomTitle" (i18n "zoomTitle")
+"arrowPrevTitle" (i18n "arrowPrevTitle")
+"arrowNextTitle" (i18n "arrowNextTitle")
+"errorMsg" (i18n "errorMsg")
+"downloadTitle" (i18n "downloadTitle")
+}}
+{{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+<!-- <script src={{ "js/main.js" | relURL }}></script> -->
+<script src={{ "js/glightbox.min.js" | relURL }}></script>
 
-    {{ $params := dict
-        "closeTitle" (i18n "closeTitle")
-        "zoomTitle" (i18n "zoomTitle")
-        "arrowPrevTitle" (i18n "arrowPrevTitle")
-        "arrowNextTitle" (i18n "arrowNextTitle")
-        "errorMsg" (i18n "errorMsg")
-        "downloadTitle" (i18n "downloadTitle")
-    }}
-    {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
-    <script src="{{ $js.RelPermalink }}" defer></script>
-	<!-- <script src={{ "js/main.js" | relURL }}></script> -->
-    <script src={{ "js/glightbox.min.js" | relURL }}></script>
-
-	{{ partial "style.html" . }}
-	<script src="https://kit.fontawesome.com/bf18cd1a66.js" crossorigin="anonymous"></script>
-	{{ partial "fonts.html" . }}
-	{{ partial "helpers/plausible" . }}
-</head>
-
-<body>
+{{ partial "style.html" . }}
+<script src="https://kit.fontawesome.com/bf18cd1a66.js" crossorigin="anonymous"></script>
+{{ partial "fonts.html" . }}
+<!-- {{ partial "helpers/plausible" . }} -->

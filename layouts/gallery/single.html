@@ -1,8 +1,8 @@
 <!-- Source: https://github.com/nicokaiser/hugo-theme-gallery/blob/main/layouts/partials/gallery.html -->
 
-{{ partial "header.html" . }}
+{{ partialCached "header" . }}
 
-{{ partial "navbar.html" . }}
+{{ partialCached "navbar" . }}
 
 {{ $gallery := partial "helpers/get-gallery.html" . }}
 
@@ -51,4 +51,4 @@
     lightbox.init();
 </script>
 
-{{ partial "footer.html" . }}
+{{ partialCached "footer" . }}

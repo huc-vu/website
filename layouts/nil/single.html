@@ -1,6 +1,6 @@
-{{ partial "header.html" . }}
+{{ partialCached "header" . }}
 
-{{ partial "navbar.html" . }}
+{{ partialCached "navbar" . }}
 <body>
     <section class="hero is-fullheight">
         <div class="hero-body">
@@ -16,4 +16,4 @@
             </div>
         </div>
     </section>
-{{ partial "footer.html" . }}
+{{ partialCached "footer" . }}
