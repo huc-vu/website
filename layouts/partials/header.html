@@ -1,27 +1,34 @@
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
 
-<link rel="icon" type="image/png" href={{ "favicon.ico" | relURL }} />
-{{ $styleSass := resources.Get "scss/main.scss"}}
-{{ $styleCSS := $styleSass | resources.ToCSS }}
-<link rel="stylesheet" href="{{ $styleCSS.RelPermalink }}">
-<link rel="stylesheet" href={{ "css/glightbox.css" | relURL }}>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ partial "meta" . }}
 
-{{ $params := dict
-"closeTitle" (i18n "closeTitle")
-"zoomTitle" (i18n "zoomTitle")
-"arrowPrevTitle" (i18n "arrowPrevTitle")
-"arrowNextTitle" (i18n "arrowNextTitle")
-"errorMsg" (i18n "errorMsg")
-"downloadTitle" (i18n "downloadTitle")
-}}
-{{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
-<script src="{{ $js.RelPermalink }}" defer></script>
-<!-- <script src={{ "js/main.js" | relURL }}></script> -->
-<script src={{ "js/glightbox.min.js" | relURL }}></script>
+    <link rel="icon" type="image/png" href={{ "favicon.ico" | relURL }} />
+    {{ $styleSass := resources.Get "scss/main.scss"}}
+    {{ $styleCSS := $styleSass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $styleCSS.RelPermalink }}">
+    <link rel="stylesheet" href={{ "css/glightbox.css" | relURL }}>
 
-{{ partial "style.html" . }}
-<script src="https://kit.fontawesome.com/bf18cd1a66.js" crossorigin="anonymous"></script>
-{{ partial "fonts.html" . }}
-<!-- {{ partial "helpers/plausible" . }} -->
+    {{ $params := dict
+    "closeTitle" (i18n "closeTitle")
+    "zoomTitle" (i18n "zoomTitle")
+    "arrowPrevTitle" (i18n "arrowPrevTitle")
+    "arrowNextTitle" (i18n "arrowNextTitle")
+    "errorMsg" (i18n "errorMsg")
+    "downloadTitle" (i18n "downloadTitle")
+    }}
+    {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
+    <!-- <script src={{ "js/main.js" | relURL }}></script> -->
+    <script src={{ "js/glightbox.min.js" | relURL }}></script>
+
+    {{ partial "style" . }}
+    <script src="https://kit.fontawesome.com/bf18cd1a66.js" crossorigin="anonymous"></script>
+    {{ partial "fonts" . }}
+</head>
+
+<body>

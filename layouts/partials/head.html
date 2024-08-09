@@ -1,11 +1,5 @@
-<body>
-    <section class="section">
-        <div class="container">
-            <header>
-                <h1 class="site-title">
-                    <a href="/">{{ .Site.Title }}</a>
-                </h1>
-                <p class="subtitle">
-                    {{ .Site.Params.Subtitle | markdownify }}
-                </p>
-            </header>
+{{ if and .Title (not .IsHome) }}
+    <title>{{ .Title }} {{ if .Params.Subtitle }}- {{ .Params.Subtitle }}{{else}}- {{ .Site.Title }}{{ end }}</title>
+{{ else }}
+    <title>{{ .Site.Title }}</title>
+{{ end }}
