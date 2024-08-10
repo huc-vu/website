@@ -6,6 +6,7 @@ ratings:
 - 4
 tags:
 - japonais
+- tapas
 cover: P1001900_export
 ---
 

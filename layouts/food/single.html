@@ -27,7 +27,7 @@
         </div>
         <div class="food-tags">
             {{ range .Params.Tags }}
-            <div class="badge"> {{ . }} </div>
+            <div class="badge"><a href="{{ printf "/tags/%s" .}}">{{ . }}</a></div>
             {{ end }}
         </div>
     </div>

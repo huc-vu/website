@@ -207,10 +207,6 @@ a img {
     .badge {
         background-color: #3d77c2;
     }
-
-    .badge a {
-        color: white;
-    }
 }
 
 .card-title {
@@ -235,8 +231,8 @@ a img {
     display: flex;
     flex-direction: column;
 	justify-content: center;
-    margin-left: 10em;
-    margin-right: 10em;
+    margin-left: 5em;
+    margin-right: 5em;
     margin-top: 2em;
 
     .row {
@@ -314,6 +310,10 @@ a img {
     background-color: var(--text-main);
     margin-left: 0.2em;
     margin-right: 0.2em;
+
+    a {
+        color: white;
+    }
 }
 
 .food-photos {

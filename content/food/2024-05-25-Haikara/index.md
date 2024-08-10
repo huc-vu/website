@@ -6,5 +6,5 @@ ratings:
 - 4
 tags:
 - japonais
-cover: P1004588_export
+cover: P1004588
 ---
