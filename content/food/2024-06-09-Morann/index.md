@@ -4,7 +4,7 @@ address: 5 rue Lefebvre, 75015 Paris
 date: 2024-06-09
 ratings:
 - 3
-tags:
+foodtags:
 - coréen
 cover: P1005052_export
 ---

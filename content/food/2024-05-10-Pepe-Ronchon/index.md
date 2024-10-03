@@ -4,7 +4,7 @@ address: 31 Rue Saint-Lazare, 75009 Paris
 date: 2024-05-10
 ratings:
 - 3
-tags:
+foodtags:
 - italien
 - pizza
 cover: P1004514_export

@@ -4,7 +4,7 @@ address: 29 Rue Mazarine, 75006 Paris
 date: 2023-12-17
 ratings:
 - 5
-tags:
+foodtags:
 - japonais
 - ramen
 cover: 01_cover

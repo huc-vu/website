@@ -4,7 +4,7 @@ address: 154 Rue du Faubourg Saint-Antoine, 75012 Paris
 date: 2023-12-14
 ratings:
 - 4
-tags:
+foodtags:
 - japonais
 cover: 01_cover
 ---

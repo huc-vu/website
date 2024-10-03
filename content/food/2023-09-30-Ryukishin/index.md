@@ -4,7 +4,7 @@ address: 59 Rue de Richelieu, 75002 Paris
 date: 2023-09-30
 ratings:
 - 4
-tags:
+foodtags:
 - japonais
 - ramen
 cover: 01_cover

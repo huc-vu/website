@@ -22,6 +22,7 @@ markup:
 
 taxonomies:
   tag: tags
+  foodtag: foodtags
   rating: ratings
 
 permalinks:

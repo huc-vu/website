@@ -4,7 +4,7 @@ address: 18 Rue du Pont aux Choux, 75003 Paris
 date: 2023-07-23
 ratings:
 - 4
-tags:
+foodtags:
 - japonais
 - curry
 cover: 01_cover

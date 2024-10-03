@@ -4,7 +4,7 @@ address: 12 Rue de Richelieu, 75001 Paris
 date: 2023-10-28
 ratings:
 - 5
-tags:
+foodtags:
 - japonais
 - ramen
 cover: 01_cover

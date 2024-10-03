@@ -4,7 +4,7 @@ address: 8 Rue Tiquetonne, 75002 Paris
 date: 2024-01-13
 ratings:
 - 4
-tags:
+foodtags:
 - italien
 - pizza
 cover: P1003579_export

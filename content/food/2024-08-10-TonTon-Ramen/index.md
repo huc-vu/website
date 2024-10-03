@@ -4,7 +4,7 @@ address: 4 rue Cherubini, 75002 Paris
 date: 2024-08-10
 ratings:
 - 4
-tags:
+foodtags:
 - japonais
 - ramen
 cover: P1005631

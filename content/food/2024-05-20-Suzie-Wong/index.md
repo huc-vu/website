@@ -4,7 +4,7 @@ address:
 date: 2024-05-20
 ratings:
 - 3
-tags:
+foodtags:
 - chinois 
 cover: P1004580_export
 ---

@@ -4,7 +4,7 @@ address: 8 Rue Boudreau, 75009 Paris
 date: 2024-06-28
 ratings:
 - 4
-tags:
+foodtags:
 - pizza
 cover: P1005441_export
 ---

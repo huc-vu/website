@@ -4,7 +4,7 @@ address: 9 rue des Petits Champs, 75001 Paris
 date: 2024-08-03
 ratings:
 - 4
-tags:
+foodtags:
 - vietnamien
 cover: P1005600
 ---

@@ -26,8 +26,8 @@
             <h3>{{ .Params.Address }}</h3>
         </div>
         <div class="food-tags">
-            {{ range .Params.Tags }}
-            <div class="badge"><a href="{{ printf "/tags/%s" .}}">{{ . }}</a></div>
+            {{ range .Params.foodtags }}
+            <div class="badge"><a href="{{ printf "/foodtags/%s" .}}">{{ . }}</a></div>
             {{ end }}
         </div>
     </div>

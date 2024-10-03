@@ -4,7 +4,7 @@ address: 7 Rue Tiquetonne, 75002 Paris
 date: 2023-12-09
 ratings:
 - 4
-tags:
+foodtags:
 - caribéen
 cover: 01_cover
 ---

@@ -4,7 +4,7 @@ address: 77 Rue du Faubourg Saint-Martin, 75010 Paris
 date: 2024-05-04
 ratings:
 - 5
-tags:
+foodtags:
 - japonais
 - ramen
 cover: P1004481_export

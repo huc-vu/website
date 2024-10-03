@@ -4,7 +4,7 @@ address: 272 Rue Saint-Honoré, 75001 Paris
 date: 2023-10-31
 ratings:
 - 4
-tags:
+foodtags:
 - japonais
 - anguille
 cover: cover

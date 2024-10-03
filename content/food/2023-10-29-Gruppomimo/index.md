@@ -4,7 +4,7 @@ address: 24 Rue Keller, 75011 Paris
 date: 2023-10-29
 ratings:
 - 4
-tags:
+foodtags:
 - italien
 - pizza
 cover: 01_cover

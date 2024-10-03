@@ -5,6 +5,7 @@
 <section class="section" id="food-section">
     <div class="section-header">
         <h1>Restaurants</h1>
+
     </div>
     <div class="food-list">
         {{ range .Pages }}
@@ -33,8 +34,8 @@
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </div>
                 <div class="card-tags">
-                    {{ range .Params.Tags }}
-                        <div class="badge"><a href="{{ printf "/tags/%s" .}}">{{ . }}</a></div>
+                    {{ range .Params.foodtags }}
+                        <div class="badge"><a href="{{ printf "/foodtags/%s" .}}">{{ . }}</a></div>
                     {{ end }}
                 </div>
                 <div class="card-rating">

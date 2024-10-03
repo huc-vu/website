@@ -5,7 +5,7 @@ date: 2023-12-24
 expiryDate: 2023-12-24
 ratings:
 - 3
-tags:
+foodtags:
 - italien
 - pizza
 ---

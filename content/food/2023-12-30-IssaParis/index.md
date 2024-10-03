@@ -4,7 +4,7 @@ address: 4 Rue du Petit Moine, 75005 Paris
 date: 2023-12-30
 ratings:
 - 4
-tags:
+foodtags:
 - japonais
 - tapas
 cover: P1001900_export

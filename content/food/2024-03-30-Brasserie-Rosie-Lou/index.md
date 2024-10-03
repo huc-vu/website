@@ -4,7 +4,7 @@ address: 31 Bd de Bonne Nouvelle, 75002 Paris
 date: 2024-03-30
 ratings:
 - 4
-tags:
+foodtags:
 - français
 - basque
 cover: P1002325_export

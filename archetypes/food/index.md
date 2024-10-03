@@ -6,7 +6,7 @@ address:
 date: {{ $date }}
 ratings:
 - 
-tags:
+foodtags:
 - 
 cover: 
 ---

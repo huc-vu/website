@@ -4,7 +4,7 @@ address: 13 Rue d'Avron, 75020 Paris
 date: 2024-04-04
 ratings:
 - 4
-tags:
+foodtags:
 - marocain
 cover: P1002350_export
 ---

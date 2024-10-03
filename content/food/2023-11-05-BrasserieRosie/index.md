@@ -4,7 +4,7 @@ address: 53 Rue du Faubourg Saint-Antoine, 75011 Paris
 date: 2023-11-05
 ratings:
 - 4
-tags:
+foodtags:
 - français
 cover: 01_cover
 ---
