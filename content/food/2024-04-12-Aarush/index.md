@@ -6,5 +6,7 @@ ratings:
 - 3
 foodtags:
 - indien
+countrycodes:
+- IND
 cover: P1004181_export
 ---

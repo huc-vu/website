@@ -7,6 +7,8 @@ ratings:
 foodtags:
 - japonais
 - ramen
+countrycodes:
+- JPN
 cover: P1004481_export
 ---
 

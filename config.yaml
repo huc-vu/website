@@ -24,6 +24,7 @@ taxonomies:
   tag: tags
   foodtag: foodtags
   rating: ratings
+  countrycode: countrycodes
 
 permalinks:
   home: ":filename/"

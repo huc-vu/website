@@ -6,6 +6,8 @@ ratings:
 - 5
 foodtags:
 - vietnamien
+countrycodes:
+- VNM
 cover: P1002091_export
 ---
 

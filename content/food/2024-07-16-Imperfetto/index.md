@@ -7,5 +7,7 @@ ratings:
 foodtags:
 - italien
 - pizza
+countrycodes:
+- ITA
 cover: IMG_4584
 ---

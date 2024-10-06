@@ -6,6 +6,8 @@ ratings:
 - 4
 foodtags:
 - burger
+countrycodes:
+- USA
 cover: 1_P1016203_export
 ---
 

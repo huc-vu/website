@@ -7,5 +7,7 @@ ratings:
 foodtags:
 - français
 - tapas
+countrycodes:
+- FRA
 cover: P1005610
 ---

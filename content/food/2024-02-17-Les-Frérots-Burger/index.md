@@ -6,5 +6,8 @@ ratings:
 - 5
 foodtags:
 - burger
+countrycodes:
+- FRA
+- USA
 cover: P1002187
 ---

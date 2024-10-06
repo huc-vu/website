@@ -8,6 +8,8 @@ ratings:
 foodtags:
 - italien
 - pizza
+countrycodes:
+- JPN
 ---
 
 <div align="center">

@@ -7,5 +7,7 @@ ratings:
 foodtags:
 - asiatique
 - burger
+countrycodes:
+- CHN
 cover: P1004563_export
 ---

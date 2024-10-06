@@ -56,18 +56,18 @@
                 {{ $resizerThumbnail := (printf "%s r0" $factorThumbnail) }}
 
                 {{ with $resource.Exif }}
-                {{ if eq .Tags.Orientation 6 }}
-                {{ $resizerFull = (printf "%s r270" $factorFull) }}
-                {{ $resizerThumbnail = (printf "%s r270" $factorThumbnail) }}
-                {{ end }}
-                {{ if eq .Tags.Orientation 3 }}
-                {{ $resizerFull = (printf "%s r180" $factorFull) }}
-                {{ $resizerThumbnail = (printf "%s r180" $factorThumbnail) }}
-                {{ end }}
-                {{ if eq .Tags.Orientation 8 }}
-                {{ $resizerFull = (printf "%s r90" $factorFull) }}
-                {{ $resizerThumbnail = (printf "%s r90" $factorThumbnail) }}
-                {{ end }}
+                    {{ if eq .Tags.Orientation 6 }}
+                    {{ $resizerFull = (printf "%s r270" $factorFull) }}
+                    {{ $resizerThumbnail = (printf "%s r270" $factorThumbnail) }}
+                    {{ end }}
+                    {{ if eq .Tags.Orientation 3 }}
+                    {{ $resizerFull = (printf "%s r180" $factorFull) }}
+                    {{ $resizerThumbnail = (printf "%s r180" $factorThumbnail) }}
+                    {{ end }}
+                    {{ if eq .Tags.Orientation 8 }}
+                    {{ $resizerFull = (printf "%s r90" $factorFull) }}
+                    {{ $resizerThumbnail = (printf "%s r90" $factorThumbnail) }}
+                    {{ end }}
                 {{ end }}
                 {{ $imgFull := $resource.Resize $resizerFull }}
                 {{ $imgThumbnail := $resource.Resize $resizerThumbnail }}
@@ -93,17 +93,7 @@
 
 
 </div>
-<script type="text/javascript">
-    const lightbox = GLightbox({
-        selector: ".glightbox",
-        touchNavigation: true,
-        loop: false,
-        dragToleranceX: 100,
-        dragToleranceY: 150,
-        zoomable: true,
-        preload: false
-    });
-    lightbox.init();
-</script>
+
+{{ partialCached "glightbox" . }}
 
 {{ partialCached "footer" . }}

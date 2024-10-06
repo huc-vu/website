@@ -7,8 +7,9 @@ ratings:
 foodtags:
 - japonais
 - ramen
+countrycodes:
+- JPN
 cover: 01_cover
-
 ---
 
 #### Niboshi Paitan Ramen - Chef

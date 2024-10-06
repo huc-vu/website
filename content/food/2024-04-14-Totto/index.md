@@ -6,6 +6,8 @@ ratings:
 - 5
 foodtags:
 - japonais
+countrycodes:
+- JPN
 cover: P1005451
 ---
 

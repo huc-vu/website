@@ -6,5 +6,7 @@ ratings:
 - 4
 foodtags:
 - chinois
+countrycodes:
+- CHN
 cover: P1004151_export
 ---

@@ -23,8 +23,10 @@
     }}
     {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
     <script src="{{ $js.RelPermalink }}" defer></script>
-    <!-- <script src={{ "js/main.js" | relURL }}></script> -->
     <script src={{ "js/glightbox.min.js" | relURL }}></script>
+
+    <link rel="stylesheet" href={{ "leaflet/leaflet.css" | relURL }}>
+    <script src={{ "leaflet/leaflet.js" | relURL }}></script>
 
     {{ partial "style" . }}
     <script src="https://kit.fontawesome.com/bf18cd1a66.js" crossorigin="anonymous"></script>

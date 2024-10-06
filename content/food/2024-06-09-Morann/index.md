@@ -6,6 +6,8 @@ ratings:
 - 3
 foodtags:
 - coréen
+countrycodes:
+- PRK
 cover: P1005052_export
 ---
 

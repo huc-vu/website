@@ -6,5 +6,7 @@ ratings:
 - 4
 foodtags:
 - coréen
+countrycodes:
+- KOR
 cover: P1005473
 ---

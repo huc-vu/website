@@ -6,5 +6,7 @@ ratings:
 - 3
 foodtags:
 - coréen
+countrycodes:
+- KOR
 cover: P1004235_export
 ---

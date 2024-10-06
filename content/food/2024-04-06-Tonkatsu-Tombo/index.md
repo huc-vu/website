@@ -7,6 +7,8 @@ ratings:
 foodtags:
 - japonais
 - tonkatsu
+countrycodes:
+- JPN
 cover: P1004143_export
 ---
 

@@ -5,6 +5,8 @@ date: 2024-05-20
 ratings:
 - 3
 foodtags:
-- chinois 
+- chinois
+countrycodes:
+- CHN
 cover: P1004580_export
 ---

@@ -7,6 +7,8 @@ ratings:
 foodtags:
 - pizza
 - italien
+countrycodes:
+- ITA
 cover: P1005754
 ---
 

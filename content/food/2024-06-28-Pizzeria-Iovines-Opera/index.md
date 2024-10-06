@@ -6,5 +6,7 @@ ratings:
 - 4
 foodtags:
 - pizza
+countrycodes:
+- ITA
 cover: P1005441_export
 ---

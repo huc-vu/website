@@ -107,3 +107,28 @@
 .fa-star {
     color: rgb(255, 208, 0);
 }
+
+.foodmap-container {
+    height: 90vh;
+}
+
+#foodmap { 
+    height: 100%;
+    background-color: var(--background);
+    font-family: "Inter", "Arial"
+}
+
+#foodmap .info {
+    padding: 6px 8px;
+    width: 30vw;
+    font-size: 1.5em;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#foodmap .info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}

@@ -6,6 +6,8 @@ ratings:
 - 4
 foodtags:
 - marocain
+countrycodes:
+- MAR
 cover: P1002350_export
 ---
 

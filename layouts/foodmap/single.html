@@ -1,0 +1,17 @@
+{{ partial "header" . }}
+
+{{ partialCached "navbar" . }}
+
+<div class="foodmap-container">
+    <div id="foodmap">
+    </div>
+    {{ .Content }}
+</div>
+
+{{ $countrycodes := .Site.Taxonomies.countrycodes }}
+{{ $js := resources.Get "foodmap/main.js" -}}
+{{ $opts := dict "params" (dict "countryCodes" $countrycodes ) }}
+{{ $js = $js | js.Build $opts }}
+<script src="{{ $js.RelPermalink }}"></script>
+
+<!-- {{ partialCached "footer" . }} -->

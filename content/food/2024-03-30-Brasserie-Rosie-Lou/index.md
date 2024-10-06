@@ -7,6 +7,8 @@ ratings:
 foodtags:
 - français
 - basque
+countrycodes:
+- FRA
 cover: P1002325_export
 ---
 

@@ -6,6 +6,8 @@ ratings:
 - 4
 foodtags:
 - crêperie
+countrycodes:
+- FRA
 cover: P1004571_export
 ---
 

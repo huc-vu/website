@@ -6,6 +6,8 @@ ratings:
 - 4
 foodtags:
 - vietnamien
+countrycodes:
+- VNM
 cover: P1005600
 ---
 

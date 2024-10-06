@@ -6,6 +6,8 @@ ratings:
 - 4
 foodtags:
 - portugais
+countrycodes:
+- PRT
 cover: P1005045_export
 ---
 

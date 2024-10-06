@@ -6,6 +6,8 @@ ratings:
 - 4
 foodtags:
 - français
+countrycodes:
+- FRA
 cover: P1005634_2
 ---
 

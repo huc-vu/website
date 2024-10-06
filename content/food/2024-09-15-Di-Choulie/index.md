@@ -6,6 +6,8 @@ ratings:
 - 3
 foodtags:
 - chinois
+countrycodes:
+- CHN
 cover: P1005829
 ---
 

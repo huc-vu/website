@@ -7,6 +7,8 @@ ratings:
 foodtags:
 - japonais
 - tapas
+countrycodes:
+- JPN
 cover: P1001900_export
 ---
 
