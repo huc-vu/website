@@ -31,7 +31,7 @@ const countryStyle = (feature) => {
         weight: 1,
         color: '#000000',
         fill: true,
-        fillColor: getNbRestaurants(feature) > 0 ? '#f5d59f' : '#fff',
+        fillColor: getNbRestaurants(feature) > 0 ? '#86d5f9' : '#fff',
         fillOpacity: 1
     }
 }
@@ -44,10 +44,10 @@ const highlightFeature = (e) => {
         geoJson.resetStyle();
 
         layer.setStyle({
-            weight: 5,
+            weight: 4,
             color: '#666',
             dashArray: '',
-            fillOpacity: 0.7
+            fillOpacity: 0.5
         });
     
         layer.bringToFront();
