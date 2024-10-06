@@ -1,6 +1,6 @@
 import params from "@params";
 
-console.log(params.countryCodes);
+// console.log(params.countryCodes);
 
 const world = require('./world.json'); // https://github.com/AshKyd/geojson-regions/tree/main/public/countries/110m
 
@@ -24,6 +24,14 @@ const getNbRestaurants = (feature) => {
     }
     return 0;
 }
+const getCountryColor = (feature) => {
+    const nb = getNbRestaurants(feature);
+    return  nb > 10 ? '#0080bf' :
+            nb > 4 ? '#00acdf' :
+            nb > 2 ? '#52c4f2' :
+            nb > 0 ? '#8ad4f7' :
+            '#ffffff'
+}
 
 const countryStyle = (feature) => {
     return {
@@ -31,7 +39,7 @@ const countryStyle = (feature) => {
         weight: 1,
         color: '#000000',
         fill: true,
-        fillColor: getNbRestaurants(feature) > 0 ? '#86d5f9' : '#fff',
+        fillColor: getCountryColor(feature),
         fillOpacity: 1
     }
 }
@@ -47,7 +55,8 @@ const highlightFeature = (e) => {
             weight: 4,
             color: '#666',
             dashArray: '',
-            fillOpacity: 0.5
+            fillColor: '#f9be75',
+            fillOpacity: 1
         });
     
         layer.bringToFront();
