@@ -90,16 +90,14 @@ info.onAdd = function (map) {
 
 // method that we will use to update the control based on feature properties passed
 info.update = function (props, hugoParams) {
-    var listRestaurants = '<ul>';
-    console.log(hugoParams)
+    var listRestaurants = '<table class="info-list">';
     if (hugoParams) {
         hugoParams.forEach(page => {
             var visitDate = new Date(page.Page.Date).toLocaleDateString();
-            listRestaurants += '<li><a href="' + page.Page.Path + '" target="_blank">' + page.Page.LinkTitle + '</a> - ' + visitDate +'</li>'
+            listRestaurants += '<tr><td><a href="' + page.Page.Path + '" target="_blank">' + page.Page.LinkTitle + '</a></td><td>' + visitDate +'</td></tr>'
         });
     }
-    listRestaurants += '</ul>';
-    console.log(listRestaurants);
+    listRestaurants += '</table>';
     this._div.innerHTML = '<h4>Restaurants</h4>' +  (props ?
         '<b>' + props.NAME_FR + '</b><br />' + listRestaurants
         : 'Select a country');

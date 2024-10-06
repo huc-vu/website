@@ -269,6 +269,12 @@
         padding-right: 0em;
     }
 
-
+    #foodmap .info {
+        overflow: scroll;
+        // height: 30vh;
+        width: 70vw;
+        font-size: 1.2em;
+        // z-index: -1;
+    }
 }
 
