@@ -158,19 +158,28 @@ a img {
 .food-list {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(5, 15vw);
-    gap: 2rem;
+    // grid-template-columns: repeat(5, 20vw);
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 0px;
+    // gap: 2rem;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     // border: 1px solid rgb(180, 180, 180);
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     
     img {
         aspect-ratio: 1/1;
         object-fit: cover;
-        border-radius: 5px 5px 0 0;
+        border-radius: 0px 0px 0 0;
+    }
+
+    a {
+        display: flex;
+        margin: 0;
     }
 }
 
@@ -179,7 +188,8 @@ a img {
 }
 
 .card-info {
-    display: flex;
+    display: none;
+    // display: flex;
     flex-direction: column;
     justify-content: center;
     // text-transform: uppercase;
@@ -354,16 +364,16 @@ a img {
 
 -------------------------------- */
 
-.photos-radio-btns:hover .photos-radio-btns__btn:not(:hover) {
-    filter: grayscale(60%);
-    opacity: 0.75;
+.food-list:hover .card:not(:hover) {
+    filter: grayscale(50%);
+    opacity: 0.7;
 }
 
-.photos-radio-btns:hover .photos-radio-btns__btn:not(:hover)::after {
+.food-list:hover .card:not(:hover)::after {
     background-color: rgba(#000, 0.5);
 }
 
-.photos-radio-btns__btn {
+.card {
     position: relative;
     cursor: pointer;
     transition: .3s;

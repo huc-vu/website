@@ -7,6 +7,7 @@ body {
     // min-height: 100%;
     font-size: large;
     color: var(--text-main);
+    margin: 0;
 }
 
 html::-webkit-scrollbar {
@@ -30,7 +31,7 @@ header {
 }
 
 a {
-    margin-bottom: 2px;
+    // margin-bottom: 2px;
     color: var(--text-main);
     text-decoration: none;
     word-break: break-word;

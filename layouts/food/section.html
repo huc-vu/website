@@ -1,17 +1,17 @@
 {{ partial "header" . }}
 
-{{ partialCached "navbar" . }}
+<!-- {{ partialCached "navbar" . }} -->
 
 <section class="section" id="food-section">
-    <div class="section-header">
+    <!-- <div class="section-header">
         <h1>Restaurants</h1>
 
-    </div>
+    </div> -->
     <div class="food-list">
         {{ range .Pages }}
         <div class="card">
             <a href="{{ .RelPermalink }}">
-                {{ $cover := default (.Resources.GetMatch (printf "images/%s*" .Params.cover)) (.Resources.GetMatch "*cover*")}}
+            {{ $cover := default (.Resources.GetMatch (printf "images/%s*" .Params.cover)) (.Resources.GetMatch "*cover*")}}
                 {{ with $cover }}
                     {{ $resizer := "1400x r0" }}
                     {{ with .Exif }}
