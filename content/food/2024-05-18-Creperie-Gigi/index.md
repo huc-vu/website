@@ -8,7 +8,7 @@ foodtags:
 - crêperie
 countrycodes:
 - FRA
-cover: P1004571_export
+cover: P1005946
 ---
 
 #### La Galette Saucisse de Gigi
