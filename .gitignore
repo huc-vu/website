@@ -5,3 +5,4 @@ themes/
 content/food/*/images/
 *.jpg
 geojson/
+nginx.txt
