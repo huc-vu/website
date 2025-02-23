@@ -23,6 +23,10 @@
     </div>
     <div class="food-header-row">
         <div class="food-address">
+            <div class="food-links">
+                {{ $searchQuery := replace .Title " " "+"}}
+                <span id="maps-icon" class="button-4"><a href="{{ printf "https://www.google.fr/maps/search/%s+%s" $searchQuery .Params.Address}}">📍</a></span>
+            </div>
             <h3>{{ .Params.Address }}</h3>
         </div>
         <div class="food-tags">
@@ -30,6 +34,7 @@
             <div class="badge"><a href="{{ printf "/foodtags/%s" .}}">{{ . }}</a></div>
             {{ end }}
         </div>
+        
     </div>
 
     <div class="row">

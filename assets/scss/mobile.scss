@@ -204,8 +204,14 @@
     .food-address {
         display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
         margin: 0 0.3rem 0.6rem 0.3rem;
+    }
+
+    .food-address #maps-icon {
+        margin-right: 0px;
+        margin-bottom: 10px;
     }
 
     .food-address h3 {
