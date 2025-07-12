@@ -25,7 +25,7 @@
         <div class="food-address">
             <div class="food-links">
                 {{ $searchQuery := replace .Title " " "+"}}
-                <a href="{{ printf "https://www.google.fr/maps/search/%s+%s" $searchQuery .Params.Address}}"><span id="maps-icon" class="button-4">📍</span></a>
+                <a href="{{ printf "https://www.google.fr/maps/search/%s+%s" $searchQuery .Params.Address}}" target="_blank"><span id="maps-icon" class="button-4">📍</span></a>
             </div>
             <h3>{{ .Params.Address }}</h3>
         </div>
@@ -55,29 +55,23 @@
             {{ end }}
             <div class="photos-radio-btns" style="grid-template-columns: repeat({{ $gridStyle }});">
                 {{ range $index, $resource := $resources}}
-                {{ $factorFull := "2500x"}}
-                {{ $factorThumbnail := "1200x"}}
-                {{ $resizerFull := (printf "%s r0" $factorFull) }}
-                {{ $resizerThumbnail := (printf "%s r0" $factorThumbnail) }}
+                {{ $factorThumbnail := "800x webp"}}
+                <!-- {{ $resizerThumbnail := (printf "%s r0" $factorThumbnail) }}
 
                 {{ with $resource.Exif }}
                     {{ if eq .Tags.Orientation 6 }}
-                    {{ $resizerFull = (printf "%s r270" $factorFull) }}
                     {{ $resizerThumbnail = (printf "%s r270" $factorThumbnail) }}
                     {{ end }}
                     {{ if eq .Tags.Orientation 3 }}
-                    {{ $resizerFull = (printf "%s r180" $factorFull) }}
                     {{ $resizerThumbnail = (printf "%s r180" $factorThumbnail) }}
                     {{ end }}
                     {{ if eq .Tags.Orientation 8 }}
-                    {{ $resizerFull = (printf "%s r90" $factorFull) }}
                     {{ $resizerThumbnail = (printf "%s r90" $factorThumbnail) }}
                     {{ end }}
-                {{ end }}
-                {{ $imgFull := $resource.Resize $resizerFull }}
+                {{ end }} -->
                 {{ $imgThumbnail := $resource.Resize $resizerThumbnail }}
                 <div class="photos-radio-btns__btn" role="radio" aria-checked="false" tabindex="-1">
-                    <a href="{{ $imgFull.RelPermalink }}" class="glightbox">
+                    <a href="{{ $resource.RelPermalink }}" class="glightbox">
                         <img src="{{ $imgThumbnail.RelPermalink }}">
                     </a>
                 </div>

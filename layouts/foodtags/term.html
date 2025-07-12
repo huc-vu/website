@@ -12,18 +12,7 @@
             <a href="{{ .RelPermalink }}">
                 {{ $cover := default (.Resources.GetMatch (printf "images/%s*" .Params.cover)) (.Resources.GetMatch "*cover*")}}
                 {{ with $cover }}
-                    {{ $resizer := "1400x r0" }}
-                    {{ with .Exif }}
-                        {{ if eq .Tags.Orientation 6 }}
-                            {{ $resizer = "1400x r270" }}
-                        {{ end }}
-                        {{ if eq .Tags.Orientation 3 }}
-                            {{ $resizer = "1400x r180" }}
-                        {{ end }}
-                        {{ if eq .Tags.Orientation 8 }}
-                            {{ $resizer = "1400x r90" }}
-                        {{ end }}
-                    {{ end }}
+                    {{ $resizer := "800x webp" }}
                     {{ $img := .Resize $resizer }}
                     <img class="cover" src="{{ $img.RelPermalink }}">
                 {{ end }}

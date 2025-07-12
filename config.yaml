@@ -38,3 +38,8 @@ languages:
     languageName: EN
     weight: 2
     copyright: All rights reserved.
+
+caches:
+  images:
+    dir: :resourceDir/_gen
+    maxAge: -1
